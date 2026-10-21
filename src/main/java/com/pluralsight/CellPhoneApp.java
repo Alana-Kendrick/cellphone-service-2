@@ -10,6 +10,7 @@ public class CellPhoneApp {
         deviceOne = new CellPhone();
         CellPhone deviceTwo = new CellPhone();
 
+        // Populating device 1's info
         System.out.print("What is the serial number? ");
         int serialNumber = scanner.nextInt();
         deviceOne.setSerialNumber(serialNumber);
@@ -31,8 +32,30 @@ public class CellPhoneApp {
         String owner = scanner.nextLine();
         deviceOne.setOwner(owner);
 
+        // Populating device 2's info
+        System.out.print("What is the serial number? ");
+        serialNumber = scanner.nextInt();
+        deviceTwo.setSerialNumber(serialNumber);
+        scanner.nextLine(); // scanner buffer
+
+        System.out.print("What model is the phone? ");
+        model = scanner.nextLine();
+        deviceTwo.setModel(model);
+
+        System.out.print("Who is the carrier? ");
+        carrier = scanner.nextLine();
+        deviceTwo.setCarrier(carrier);
+
+        System.out.print("What is the phone number? ");
+        phoneNumber = scanner.nextLine();
+        deviceTwo.setPhoneNumber(phoneNumber);
+
+        System.out.print("Who is the owner of the phone? ");
+        owner = scanner.nextLine();
+        deviceTwo.setOwner(owner);
+
         display(deviceOne);
-        //display(deviceTwo);
+        display(deviceTwo);
 
         deviceOne.dial("123-456-7890");
 
