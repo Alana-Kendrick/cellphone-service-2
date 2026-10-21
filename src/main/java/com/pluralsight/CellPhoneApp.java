@@ -57,7 +57,8 @@ public class CellPhoneApp {
         display(deviceOne);
         display(deviceTwo);
 
-        deviceOne.dial("123-456-7890");
+        deviceOne.dial(deviceTwo.getPhoneNumber());
+        deviceTwo.dial(deviceOne.getPhoneNumber());
 
         scanner.close();
     }
