@@ -8,6 +8,7 @@ public class CellPhoneApp {
 
         CellPhone deviceOne;
         deviceOne = new CellPhone();
+        CellPhone deviceTwo = new CellPhone();
 
         System.out.print("What is the serial number? ");
         int serialNumber = scanner.nextInt();
@@ -30,11 +31,20 @@ public class CellPhoneApp {
         String owner = scanner.nextLine();
         deviceOne.setOwner(owner);
 
+        display(deviceOne);
+        //display(deviceTwo);
+
+        deviceOne.dial("123-456-7890");
+
+        scanner.close();
+    }
+
+    public static void display(CellPhone device) {
         System.out.println("Cell Phone Info: ");
-        System.out.println("Serial number: " + deviceOne.getSerialNumber());
-        System.out.println("Model: " + deviceOne.getModel());
-        System.out.println("Carrier: " + deviceOne.getCarrier());
-        System.out.println("Phone number: " + deviceOne.getPhoneNumber());
-        System.out.println("Owner: " + deviceOne.getOwner());
+        System.out.println("Serial number: " + device.getSerialNumber());
+        System.out.println("Model: " + device.getModel());
+        System.out.println("Carrier: " + device.getCarrier());
+        System.out.println("Phone number: " + device.getPhoneNumber());
+        System.out.println("Owner: " + device.getOwner());
     }
 }
